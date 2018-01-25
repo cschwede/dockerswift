@@ -1,5 +1,5 @@
 FROM centos:latest
-RUN yum update -y && yum install -y epel-release && yum install -y centos-release-openstack-newton
+RUN yum update -y && yum install -y epel-release && yum install -y centos-release-openstack-pike && yum clean all
 RUN yum install -y supervisor memcached openstack-swift-proxy openstack-swift-account openstack-swift-container openstack-swift-object && yum clean all
 
 RUN swift-ring-builder /etc/swift/account.builder create 8 1 0
