@@ -22,6 +22,4 @@ COPY config/supervisord.conf /etc/supervisord.d/swift.ini
 
 EXPOSE 8080
 
-RUN yum clean all
-
-CMD ["/usr/bin/supervisord", "-n"]
+CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.d/swift.ini"]
