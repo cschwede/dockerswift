@@ -12,4 +12,4 @@ Build the image:
 
 Run the container:
 
-    docker run [-d] -p 8080:8080 swift
+    docker run [-d] -p 8080:8080 -v node:/srv/node swift
